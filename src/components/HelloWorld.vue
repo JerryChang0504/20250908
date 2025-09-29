@@ -8,12 +8,13 @@ defineProps({
     type: Number,
     required: true,
   },
+  userName: String,
 })
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msgText }}</h1>
+    <h1 class="green">{{ `${msgText} ${userName}` }}</h1>
     <h1 class="green">{{ age }}</h1>
     <h3>
       You’ve successfully created a project with
