@@ -1,5 +1,6 @@
 <script setup>
 const props = defineProps({
+  msg: String,
   msgText: {
     type: String,
     required: true,
@@ -14,6 +15,7 @@ const helloWorld = `${props.msgText} ${props.userName}`
 
 <template>
   <div class="greetings">
+    <h1 class="green">{{ msg }}</h1>
     <h1 class="green">{{ `${msgText} ${userName}` }}</h1>
     <h1 class="green">{{ helloWorld }}</h1>
     <h1 class="green">{{ age }}</h1>

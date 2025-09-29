@@ -1,6 +1,8 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+
+const msgT = "I'm Jerry"
 </script>
 
 <template>
@@ -8,7 +10,13 @@ import TheWelcome from './components/TheWelcome.vue'
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld :msgText="'I am'" :age="'12'" :userName="'Jerry'" :defaultUserName="'John'" />
+      <HelloWorld
+        :msg="msgT"
+        :msgText="'I am'"
+        :age="'12'"
+        :userName="'Jerry'"
+        :defaultUserName="'John'"
+      />
     </div>
   </header>
 
