@@ -10,7 +10,7 @@ const props = defineProps({
   defaultUserName: { type: String, default: 'Mary' },
   propF: {
     type: Object,
-    default(rawProps) {
+    default() {
       return { message: 'hello' }
     },
   },
