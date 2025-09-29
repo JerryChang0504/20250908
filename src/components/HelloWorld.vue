@@ -1,5 +1,5 @@
 <script setup>
-defineProps({
+const props = defineProps({
   msgText: {
     type: String,
     required: true,
@@ -10,11 +10,14 @@ defineProps({
   },
   userName: String,
 })
+
+const helloWorld = `${props.msgText} ${props.userName}`
 </script>
 
 <template>
   <div class="greetings">
     <h1 class="green">{{ `${msgText} ${userName}` }}</h1>
+    <h1 class="green">{{ helloWorld }}</h1>
     <h1 class="green">{{ age }}</h1>
     <h3>
       You’ve successfully created a project with
