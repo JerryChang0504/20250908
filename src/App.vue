@@ -1,6 +1,7 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import PropComponent from './components/PropComponent.vue'
 
 const msgT = "I'm Jerry"
 </script>
@@ -10,7 +11,8 @@ const msgT = "I'm Jerry"
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld
+      <HelloWorld msg="You do it!" />
+      <PropComponent
         :msg="msgT"
         :msgText="'I am'"
         :age="'12'"
