@@ -8,6 +8,17 @@ const props = defineProps({
   age: [String, Number, Object],
   userName: String,
   defaultUserName: { type: String, default: 'Mary' },
+  propF: {
+    type: Object,
+    default(rawProps) {
+      return { message: 'hello' }
+    },
+  },
+  propG: {
+    validator(value, props) {
+      return ['success', 'warning', 'danger'].includes(value)
+    },
+  },
 })
 
 const helloWorld = `${props.msgText} ${props.userName}`
@@ -20,6 +31,8 @@ const helloWorld = `${props.msgText} ${props.userName}`
     <h1 class="green">{{ helloWorld }}</h1>
     <h1 class="green">{{ age }}</h1>
     <h1 class="green">{{ defaultUserName }}</h1>
+    <h1 class="green">{{ propF }}</h1>
+    <h1 class="green">{{ propG }}</h1>
     <h3>
       You’ve successfully created a project with
       <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +

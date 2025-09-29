@@ -16,6 +16,8 @@ const msgT = "I'm Jerry"
         :age="'12'"
         :userName="'Jerry'"
         :defaultUserName="'John'"
+        :propF="{ msg: 'hello' }"
+        :propG="'success'"
       />
     </div>
   </header>
