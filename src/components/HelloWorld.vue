@@ -1,7 +1,11 @@
 <script setup>
 defineProps({
-  msg: {
+  msgText: {
     type: String,
+    required: true,
+  },
+  age: {
+    type: Number,
     required: true,
   },
 })
@@ -9,7 +13,8 @@ defineProps({
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="green">{{ msgText }}</h1>
+    <h1 class="green">{{ age }}</h1>
     <h3>
       You’ve successfully created a project with
       <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
