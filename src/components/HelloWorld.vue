@@ -4,11 +4,9 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  age: {
-    type: Number,
-    required: true,
-  },
+  age: [String, Number, Object],
   userName: String,
+  defaultUserName: { type: String, default: 'Mary' },
 })
 
 const helloWorld = `${props.msgText} ${props.userName}`
@@ -19,6 +17,7 @@ const helloWorld = `${props.msgText} ${props.userName}`
     <h1 class="green">{{ `${msgText} ${userName}` }}</h1>
     <h1 class="green">{{ helloWorld }}</h1>
     <h1 class="green">{{ age }}</h1>
+    <h1 class="green">{{ defaultUserName }}</h1>
     <h3>
       You’ve successfully created a project with
       <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
