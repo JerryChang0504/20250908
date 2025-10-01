@@ -3,6 +3,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import PropComponent from './components/PropComponent.vue'
 import RefCount from './components/RefCount.vue'
+import ReactiveComp from './components/ReactiveComp.vue'
 
 const msgT = "I'm Jerry"
 </script>
@@ -13,7 +14,8 @@ const msgT = "I'm Jerry"
 
     <div class="wrapper">
       <!-- <HelloWorld msg="You do it!" /> -->
-      <RefCount />
+      <!-- <RefCount /> -->
+      <ReactiveComp />
     </div>
   </header>
 
