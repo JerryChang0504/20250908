@@ -2,6 +2,11 @@
 import { ref, reactive } from 'vue'
 const count = ref(0)
 const box = reactive({ color: 'blue' })
+
+const changeColor = () => {
+  count.value++
+  box.color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+}
 </script>
 
 <template>
