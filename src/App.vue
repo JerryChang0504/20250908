@@ -2,25 +2,18 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import PropComponent from './components/PropComponent.vue'
+import RefCount from './components/RefCount.vue'
 
 const msgT = "I'm Jerry"
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" /> -->
 
     <div class="wrapper">
-      <HelloWorld msg="You do it!" />
-      <PropComponent
-        :msg="msgT"
-        :msgText="'I am'"
-        :age="'12'"
-        :userName="'Jerry'"
-        :defaultUserName="'John'"
-        :propF="{ msg: 'hello' }"
-        :propG="'success'"
-      />
+      <!-- <HelloWorld msg="You do it!" /> -->
+      <RefCount />
     </div>
   </header>
 
