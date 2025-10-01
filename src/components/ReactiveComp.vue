@@ -8,6 +8,16 @@ const ar = reactive([
 const add = () => {
   ar.push({ key: 3, value: 'c' })
 }
+
+let noReactiveArray = [
+  { key: 1, value: 'a' },
+  { key: 2, value: 'B' },
+]
+
+const addnoreactiveArray = () => {
+  noReactiveArray.push({ key: 3, value: 'c' })
+  console.log('🚀 ~ addnoreactiveArray ~ noReactiveArray:', noReactiveArray)
+}
 </script>
 
 <template>

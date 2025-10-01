@@ -4,7 +4,7 @@ import TheWelcome from './components/TheWelcome.vue'
 import PropComponent from './components/PropComponent.vue'
 import RefCount from './components/RefCount.vue'
 import ReactiveComp from './components/ReactiveComp.vue'
-
+import ChangColor from './components/ChangColor.vue'
 const msgT = "I'm Jerry"
 </script>
 
@@ -16,6 +16,7 @@ const msgT = "I'm Jerry"
       <!-- <HelloWorld msg="You do it!" /> -->
       <!-- <RefCount /> -->
       <ReactiveComp />
+      <ChangColor />
     </div>
   </header>
 
