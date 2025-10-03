@@ -1,7 +1,7 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { reactive, computed } from 'vue'
 // 購物車商品
-const cartItems = ref([
+const cartItems = reactive([
   {
     name: '蘋果',
     price: 10,
@@ -26,13 +26,19 @@ const cartItems = ref([
 ])
 
 const decrementQuantity = (index) => {
-  if (cartItems.value[index].quantity > 0) {
-    cartItems.value[index].quantity--
+  if (cartItems[index].quantity > 0) {
+    cartItems[index].quantity--
   }
 }
 const incrementQuantity = (index) => {
-  cartItems.value[index].quantity++
+  cartItems[index].quantity++
 }
+
+const totalQuantity = computed(() => cartItems.reduce((acc, product) => acc + product.quantity, 0))
+
+const totalPrice = computed(() =>
+  cartItems.reduce((acc, product) => acc + product.quantity * product.price, 0),
+)
 </script>
 
 <template>

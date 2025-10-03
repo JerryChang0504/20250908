@@ -14,14 +14,14 @@ const msgT = "I'm Jerry"
   <header>
     <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" /> -->
 
-    <class class="wrapper">
+    <div class="wrapper">
       <!-- <HelloWorld msg="You do it!" /> -->
       <!-- <RefCount /> -->
       <!-- <ReactiveComp /> -->
       <!-- <ChangColor /> -->
       <!-- <ComputedAndMethod /> -->
       <ShoppingCart />
-    </class>
+    </div>
   </header>
 
   <main>
