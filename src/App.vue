@@ -5,6 +5,7 @@ import PropComponent from './components/PropComponent.vue'
 import RefCount from './components/RefCount.vue'
 import ReactiveComp from './components/ReactiveComp.vue'
 import ChangColor from './components/ChangColor.vue'
+import ComputedAndMethod from './components/ComputedAndMethod.vue'
 const msgT = "I'm Jerry"
 </script>
 
@@ -15,8 +16,9 @@ const msgT = "I'm Jerry"
     <div class="wrapper">
       <!-- <HelloWorld msg="You do it!" /> -->
       <!-- <RefCount /> -->
-      <ReactiveComp />
-      <ChangColor />
+      <!-- <ReactiveComp /> -->
+      <!-- <ChangColor /> -->
+      <ComputedAndMethod />
     </div>
   </header>
 
