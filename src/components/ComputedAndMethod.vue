@@ -20,6 +20,14 @@ const InventoryByMethod = (quantity) => {
   console.log(`method`)
   return quantity > limitquantity ? '✅' : '❌'
 }
+
+const addProduct = () => {
+  const maxId = products.length + 1
+  products.push({ id: maxId, name: `Product ${maxId}`, price: parseInt(`${maxId}00`), quantity: 3 })
+}
+const removeProduct = () => {
+  products.pop()
+}
 </script>
 
 <template>
