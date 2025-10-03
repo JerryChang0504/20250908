@@ -7,6 +7,9 @@ import ReactiveComp from './components/ReactiveComp.vue'
 import ChangColor from './components/ChangColor.vue'
 import ComputedAndMethod from './components/ComputedAndMethod.vue'
 import ShoppingCart from './components/ShoppingCart.vue'
+import DisableComputed from './components/DisableComputed.vue'
+import TermsAgreement from './components/TermsAgreement.vue'
+
 const msgT = "I'm Jerry"
 </script>
 
@@ -15,12 +18,14 @@ const msgT = "I'm Jerry"
     <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" /> -->
 
     <div class="wrapper">
-      <!-- <HelloWorld msg="You do it!" /> -->
+      <!-- <HelloWorld :msg="'You do it!'" /> -->
       <!-- <RefCount /> -->
       <!-- <ReactiveComp /> -->
       <!-- <ChangColor /> -->
       <!-- <ComputedAndMethod /> -->
-      <ShoppingCart />
+      <!-- <ShoppingCart /> -->
+      <!-- <DisableComputed /> -->
+      <TermsAgreement />
     </div>
   </header>
 
