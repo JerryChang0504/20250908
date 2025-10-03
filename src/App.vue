@@ -9,7 +9,7 @@ import ComputedAndMethod from './components/ComputedAndMethod.vue'
 import ShoppingCart from './components/ShoppingCart.vue'
 import DisableComputed from './components/DisableComputed.vue'
 import TermsAgreement from './components/TermsAgreement.vue'
-
+import VbindStyle from './components/VbindStyle.vue'
 const msgT = "I'm Jerry"
 </script>
 
@@ -25,7 +25,8 @@ const msgT = "I'm Jerry"
       <!-- <ComputedAndMethod /> -->
       <!-- <ShoppingCart /> -->
       <!-- <DisableComputed /> -->
-      <TermsAgreement />
+      <!-- <TermsAgreement /> -->
+      <VbindStyle />
     </div>
   </header>
 

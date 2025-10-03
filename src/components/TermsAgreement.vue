@@ -6,6 +6,8 @@
   <div>
     <input type="checkbox" id="agree" v-model="isAgreed" />
     <label for="agree">我同意上述條款</label>
+
+    <div :class="[activeClass, errorClass]">~~~</div>
   </div>
   <button :disabled="!isAgreed" @click="submit">提交</button>
   <!-- </div> -->
@@ -13,6 +15,9 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+const activeClass = ref('active')
+const errorClass = ref('text-danger')
+
 const isAgreed = ref(false)
 const textarea = ref(null)
 const terms = ref(`一、蒐集之目的：
