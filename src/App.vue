@@ -10,6 +10,7 @@ import ShoppingCart from './components/ShoppingCart.vue'
 import DisableComputed from './components/DisableComputed.vue'
 import TermsAgreement from './components/TermsAgreement.vue'
 import VbindStyle from './components/VbindStyle.vue'
+import VbindClass from './components/VbindClass.vue'
 const msgT = "I'm Jerry"
 </script>
 
@@ -27,6 +28,7 @@ const msgT = "I'm Jerry"
       <!-- <DisableComputed /> -->
       <!-- <TermsAgreement /> -->
       <VbindStyle />
+      <VbindClass />
     </div>
   </header>
 
