@@ -17,6 +17,7 @@ import VifVshowDiff from './components/VifVshowDiff.vue'
 import ConditionalRenderingReactive from './components/ConditionalRenderingReactive.vue'
 import VforObject from './components/VforObject.vue'
 import ProductList from './components/ProductList.vue'
+import ArrayChangeDetection from './components/ArrayChangeDetection.vue'
 const msgT = "I'm Jerry"
 </script>
 
@@ -40,7 +41,8 @@ const msgT = "I'm Jerry"
       <!-- <VifVshowDiff /> -->
       <!-- <ConditionalRenderingReactive /> -->
       <!-- <VforObject /> -->
-      <ProductList />
+      <!-- <ProductList /> -->
+      <ArrayChangeDetection />
     </div>
   </header>
 
