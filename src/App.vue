@@ -18,6 +18,7 @@ import ConditionalRenderingReactive from './components/ConditionalRenderingReact
 import VforObject from './components/VforObject.vue'
 import ProductList from './components/ProductList.vue'
 import ArrayChangeDetection from './components/ArrayChangeDetection.vue'
+import ProductManager from './components/ProductManager.vue'
 const msgT = "I'm Jerry"
 </script>
 
@@ -42,7 +43,8 @@ const msgT = "I'm Jerry"
       <!-- <ConditionalRenderingReactive /> -->
       <!-- <VforObject /> -->
       <!-- <ProductList /> -->
-      <ArrayChangeDetection />
+      <!-- <ArrayChangeDetection /> -->
+      <ProductManager />
     </div>
   </header>
 
