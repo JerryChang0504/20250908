@@ -16,6 +16,7 @@ import ConditionalRendering from './components/ConditionalRendering.vue'
 import VifVshowDiff from './components/VifVshowDiff.vue'
 import ConditionalRenderingReactive from './components/ConditionalRenderingReactive.vue'
 import VforObject from './components/VforObject.vue'
+import ProductList from './components/ProductList.vue'
 const msgT = "I'm Jerry"
 </script>
 
@@ -38,7 +39,8 @@ const msgT = "I'm Jerry"
       <!-- <ConditionalRendering /> -->
       <!-- <VifVshowDiff /> -->
       <!-- <ConditionalRenderingReactive /> -->
-      <VforObject />
+      <!-- <VforObject /> -->
+      <ProductList />
     </div>
   </header>
 
