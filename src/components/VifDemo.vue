@@ -6,8 +6,8 @@ const cart = reactive([
   { name: '螢幕', price: 2500 },
 ])
 
-const removeFromCart = () => {
-  cart.pop()
+const removeFromCart = (index) => {
+  cart.splice(index, 1)
 }
 </script>
 
