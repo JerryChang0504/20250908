@@ -30,7 +30,6 @@ const login = () => {
   })
   if (findUser) {
     isLoggedIn.value = true
-    username.value = findUser.username
     role.value = findUser.role
     errorMsg.value = ''
   } else {
@@ -38,6 +37,14 @@ const login = () => {
     password.value = ''
     errorMsg.value = '登入錯誤'
   }
+}
+
+const logout = () => {
+  isLoggedIn.value = false
+  username.value = ''
+  password.value = ''
+  errorMsg.value = ''
+  role.value = ''
 }
 </script>
 
