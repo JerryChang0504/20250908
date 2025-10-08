@@ -14,7 +14,8 @@ import VbindClass from './components/VbindClass.vue'
 import VifDemo from './components/VifDemo.vue'
 import ConditionalRendering from './components/ConditionalRendering.vue'
 import VifVshowDiff from './components/VifVshowDiff.vue'
-import ConditionalRenderingReactive from './components/ConditionalRenderingReactive .vue'
+import ConditionalRenderingReactive from './components/ConditionalRenderingReactive.vue'
+import VforObject from './components/VforObject.vue'
 const msgT = "I'm Jerry"
 </script>
 
@@ -36,7 +37,8 @@ const msgT = "I'm Jerry"
       <!-- <VifDemo /> -->
       <!-- <ConditionalRendering /> -->
       <!-- <VifVshowDiff /> -->
-      <ConditionalRenderingReactive />
+      <!-- <ConditionalRenderingReactive /> -->
+      <VforObject />
     </div>
   </header>
 
