@@ -31,13 +31,13 @@ const handleSubmit = () => {
   if (form.value.name && form.value.price) {
     if (form.value.id) {
       const target = products.value.find((p) => p.id === form.value.id)
-      console.log('🚀 ~ handleSubmit ~ target:', target)
-      target.name = form.value.name
-      target.price = form.value.price
+      Object.assign(target, form.value)
+      // target.name = form.value.name
+      // target.price = form.value.price
     } else {
       products.value.push({ id: nextId++, name: form.value.name, price: form.value.price })
-      resetForm()
     }
+    resetForm()
   }
 }
 
