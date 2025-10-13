@@ -21,6 +21,7 @@ import ArrayChangeDetection from './components/ArrayChangeDetection.vue'
 import ProductManager from './components/ProductManager.vue'
 import VonClick from './components/VonClick.vue'
 import VonInput from './components/VonInput.vue'
+import VonkeyEvent from './components/VonkeyEvent.vue'
 
 const msgT = "I'm Jerry"
 </script>
@@ -48,8 +49,9 @@ const msgT = "I'm Jerry"
       <!-- <ProductList /> -->
       <!-- <ArrayChangeDetection /> -->
       <!-- <ProductManager /> -->
-      <VonClick />
-      <VonInput />
+      <!-- <VonClick /> -->
+      <!-- <VonInput /> -->
+      <VonkeyEvent />
     </div>
   </header>
 
