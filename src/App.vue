@@ -22,6 +22,7 @@ import ProductManager from './components/ProductManager.vue'
 import VonClick from './components/VonClick.vue'
 import VonInput from './components/VonInput.vue'
 import VonkeyEvent from './components/VonkeyEvent.vue'
+import VmodelDemo from './components/VmodelDemo.vue'
 
 const msgT = "I'm Jerry"
 </script>
@@ -51,7 +52,8 @@ const msgT = "I'm Jerry"
       <!-- <ProductManager /> -->
       <!-- <VonClick /> -->
       <!-- <VonInput /> -->
-      <VonkeyEvent />
+      <!-- <VonkeyEvent /> -->
+      <VmodelDemo />
     </div>
   </header>
 

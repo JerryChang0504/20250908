@@ -10,7 +10,6 @@ const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
 </script>
 
 <template>
-  teacher
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
