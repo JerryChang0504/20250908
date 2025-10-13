@@ -29,8 +29,15 @@ const form = ref({
 
 const handleSubmit = () => {
   if (form.value.name && form.value.price) {
-    products.value.push({ id: nextId++, name: form.value.name, price: form.value.price })
-    resetForm()
+    if (form.value.id) {
+      const target = products.value.find((p) => p.id === form.value.id)
+      console.log('🚀 ~ handleSubmit ~ target:', target)
+      target.name = form.value.name
+      target.price = form.value.price
+    } else {
+      products.value.push({ id: nextId++, name: form.value.name, price: form.value.price })
+      resetForm()
+    }
   }
 }
 
@@ -42,9 +49,13 @@ const resetForm = () => {
   }
 }
 
-const editProduct = (p) => {
-  console.log('🚀 ~ edit ~ p:', p)
+const editProduct = (p, id) => {
   form.value = { ...p }
+}
+
+const removeProduct = (id) => {
+  products.value = products.value.filter((p) => p.id !== id)
+  if (form.value.id === id) resetForm()
 }
 </script>
 

@@ -6,7 +6,7 @@ const props = defineProps({
 const emits = defineEmits(['edit', 'delete'])
 
 const editProduct = () => {
-  emits('edit', props.product)
+  emits('edit', props.product, props.product?.id)
 }
 
 const removeProduct = () => {
