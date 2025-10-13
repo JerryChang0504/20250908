@@ -19,6 +19,7 @@ import VforObject from './components/VforObject.vue'
 import ProductList from './components/ProductList.vue'
 import ArrayChangeDetection from './components/ArrayChangeDetection.vue'
 import ProductManager from './components/ProductManager.vue'
+import VonClick from './components/VonClick.vue'
 const msgT = "I'm Jerry"
 </script>
 
@@ -44,7 +45,8 @@ const msgT = "I'm Jerry"
       <!-- <VforObject /> -->
       <!-- <ProductList /> -->
       <!-- <ArrayChangeDetection /> -->
-      <ProductManager />
+      <!-- <ProductManager /> -->
+      <VonClick />
     </div>
   </header>
 
