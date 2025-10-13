@@ -26,6 +26,26 @@ const form = ref({
   name: '',
   price: '',
 })
+
+const handleSubmit = () => {
+  if (form.value.name && form.value.price) {
+    products.value.push({ id: nextId++, name: form.value.name, price: form.value.price })
+    resetForm()
+  }
+}
+
+const resetForm = () => {
+  form.value = {
+    id: null,
+    name: '',
+    price: '',
+  }
+}
+
+const editProduct = (p) => {
+  console.log('🚀 ~ edit ~ p:', p)
+  form.value = { ...p }
+}
 </script>
 
 <template>
@@ -51,8 +71,8 @@ const form = ref({
       v-for="product in products"
       :key="product.id"
       :product="product"
-      @delete="removeProduct"
       @edit="editProduct"
+      @delete="removeProduct"
     />
 
     <p v-if="products.length === 0">⚠️ 沒有商品</p>
