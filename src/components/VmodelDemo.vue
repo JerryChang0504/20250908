@@ -33,7 +33,7 @@ const gender = ref('')
   <label v-for="interest in interestList" :key="interest.id"
     ><input type="checkbox" :value="interest.code" v-model="interests" /> {{ interest.name }}</label
   >
-
+  <hr />
   <label><input type="checkbox" value="閱讀" v-model="interests" /> 閱讀</label>
   <label><input type="checkbox" value="運動" v-model="interests" /> 運動</label>
   <label><input type="checkbox" value="旅行" v-model="interests" /> 旅行</label>

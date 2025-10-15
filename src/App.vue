@@ -33,32 +33,32 @@ const msgT = "I'm Jerry"
 
     <div class="wrapper">
       <!-- <HelloWorld :msg="'You do it!'" /> -->
-      <!-- <RefCount /> -->
-      <!-- <ReactiveComp /> -->
-      <!-- <ChangColor /> -->
-      <!-- <ComputedAndMethod /> -->
-      <!-- <ShoppingCart /> -->
-      <!-- <DisableComputed /> -->
-      <!-- <TermsAgreement /> -->
-      <!-- <VbindStyle />
-      <VbindClass /> -->
-      <!-- <VifDemo /> -->
-      <!-- <ConditionalRendering /> -->
-      <!-- <VifVshowDiff /> -->
-      <!-- <ConditionalRenderingReactive /> -->
-      <!-- <VforObject /> -->
-      <!-- <ProductList /> -->
-      <!-- <ArrayChangeDetection /> -->
-      <!-- <ProductManager /> -->
-      <!-- <VonClick /> -->
-      <!-- <VonInput /> -->
-      <!-- <VonkeyEvent /> -->
-      <VmodelDemo />
     </div>
   </header>
 
   <main>
-    <TheWelcome />
+    <!-- <TheWelcome /> -->
+    <!-- <RefCount /> -->
+    <!-- <ReactiveComp /> -->
+    <!-- <ChangColor /> -->
+    <!-- <ComputedAndMethod /> -->
+    <!-- <ShoppingCart /> -->
+    <!-- <DisableComputed /> -->
+    <!-- <TermsAgreement /> -->
+    <!-- <VbindStyle /> -->
+    <!-- <VbindClass /> -->
+    <!-- <VifDemo /> -->
+    <!-- <ConditionalRendering /> -->
+    <!-- <VifVshowDiff /> -->
+    <!-- <ConditionalRenderingReactive /> -->
+    <!-- <VforObject /> -->
+    <!-- <ProductList /> -->
+    <!-- <ArrayChangeDetection /> -->
+    <!-- <ProductManager /> -->
+    <!-- <VonClick /> -->
+    <!-- <VonInput /> -->
+    <!-- <VonkeyEvent /> -->
+    <VmodelDemo />
   </main>
 </template>
 
