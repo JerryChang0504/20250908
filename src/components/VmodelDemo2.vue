@@ -1,8 +1,42 @@
 <script setup>
-import { ref } from 'vue'
-const genderOptions = ref([])
-const hobbyOptions = ref([])
-const countryOptions = ref([])
+import { reactive, ref } from 'vue'
+const form = reactive({
+  name: '',
+  gender: '',
+  hobbies: [],
+  country: '',
+})
+
+const genderOptions = ref(['男', '女'])
+const hobbyOptions = ref(['閱讀', '運動', '旅行'])
+const countryOptions = ref([
+  { numeric: 158, code: 'tw', name: '台灣' },
+  { numeric: 392, code: 'jp', name: '日本' },
+  { numeric: 840, code: 'us', name: '美國' },
+  { numeric: 410, code: 'kr', name: '韓國' },
+  { numeric: 156, code: 'cn', name: '中國' },
+  { numeric: 826, code: 'gb', name: '英國' },
+  { numeric: 250, code: 'fr', name: '法國' },
+  { numeric: 276, code: 'de', name: '德國' },
+])
+const result = ref(null)
+
+const submit = () => {
+  if (form.name && form.gender && form.country) {
+    result.value = { ...form }
+  } else {
+    alert('姓名、性別、國家 為必填選項')
+  }
+}
+
+const reset = () => {
+  form.name = ''
+  form.gender = ''
+  form.hobbies = []
+  form.country = ''
+
+  result.value = null
+}
 </script>
 
 <template>
@@ -12,14 +46,14 @@ const countryOptions = ref([])
     <!-- 姓名 -->
     <div class="form-group">
       <label>姓名：</label>
-      <input v-model="form?.name" placeholder="請輸入姓名" />
+      <input v-model="form.name" placeholder="請輸入姓名" />
     </div>
 
     <!-- 性別 -->
     <div class="form-group">
       <label>性別：</label>
       <label v-for="(option, index) in genderOptions" :key="index">
-        <input type="radio" :value="option" v-model="form?.gender" />
+        <input type="radio" :value="option" v-model="form.gender" />
         {{ option }}
       </label>
     </div>
@@ -28,7 +62,7 @@ const countryOptions = ref([])
     <div class="form-group">
       <label>興趣：</label>
       <label v-for="(interest, index) in hobbyOptions" :key="index">
-        <input type="checkbox" :value="interest" v-model="form?.hobbies" />
+        <input type="checkbox" :value="interest" v-model="form.hobbies" />
         {{ interest }}
       </label>
     </div>
@@ -36,7 +70,7 @@ const countryOptions = ref([])
     <!-- 國家 -->
     <div class="form-group">
       <label>國家：</label>
-      <select v-model="form?.country">
+      <select v-model="form.country">
         <option disabled value="">請選擇</option>
         <option v-for="country in countryOptions" :key="country.code" :value="country?.numeric">
           {{ country.name }}
