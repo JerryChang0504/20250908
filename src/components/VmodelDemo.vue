@@ -14,6 +14,16 @@ const interestList = ref([
 const gender = ref('')
 
 const country = ref('')
+const countryOptions = ref([
+  { numeric: 158, code: 'tw', name: '台灣' },
+  { numeric: 392, code: 'jp', name: '日本' },
+  { numeric: 840, code: 'us', name: '美國' },
+  { numeric: 410, code: 'kr', name: '韓國' },
+  { numeric: 156, code: 'cn', name: '中國' },
+  { numeric: 826, code: 'gb', name: '英國' },
+  { numeric: 250, code: 'fr', name: '法國' },
+  { numeric: 276, code: 'de', name: '德國' },
+])
 </script>
 
 <template>
@@ -51,7 +61,14 @@ const country = ref('')
 
   <hr />
   <h3>選擇國家：</h3>
-  <select class="selectClass" v-model="country">
+  <select class="selectClass" v-model="country" multiple>
+    <option disabled value="">請選擇</option>
+    <option v-for="country in countryOptions" :key="country.numeric" :value="country.code">
+      {{ country.name }}
+    </option>
+  </select>
+
+  <select class="selectClass" v-model="country" multiple>
     <option disabled value="">請選擇</option>
     <option value="tw">台灣</option>
     <option value="jp">日本</option>

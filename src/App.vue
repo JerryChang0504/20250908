@@ -23,6 +23,7 @@ import VonClick from './components/VonClick.vue'
 import VonInput from './components/VonInput.vue'
 import VonkeyEvent from './components/VonkeyEvent.vue'
 import VmodelDemo from './components/VmodelDemo.vue'
+import VmodelDemo2 from './components/VmodelDemo2.vue'
 
 const msgT = "I'm Jerry"
 </script>
@@ -58,7 +59,8 @@ const msgT = "I'm Jerry"
     <!-- <VonClick /> -->
     <!-- <VonInput /> -->
     <!-- <VonkeyEvent /> -->
-    <VmodelDemo />
+    <!-- <VmodelDemo /> -->
+    <VmodelDemo2 />
   </main>
 </template>
 
