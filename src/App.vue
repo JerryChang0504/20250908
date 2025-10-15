@@ -24,6 +24,7 @@ import VonInput from './components/VonInput.vue'
 import VonkeyEvent from './components/VonkeyEvent.vue'
 import VmodelDemo from './components/VmodelDemo.vue'
 import VmodelDemo2 from './components/VmodelDemo2.vue'
+import OnMounted from './components/OnMounted.vue'
 
 const msgT = "I'm Jerry"
 </script>
@@ -60,7 +61,8 @@ const msgT = "I'm Jerry"
     <!-- <VonInput /> -->
     <!-- <VonkeyEvent /> -->
     <!-- <VmodelDemo /> -->
-    <VmodelDemo2 />
+    <!-- <VmodelDemo2 /> -->
+    <OnMounted />
   </main>
 </template>
 
