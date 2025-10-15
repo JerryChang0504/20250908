@@ -26,6 +26,8 @@ import VmodelDemo from './components/VmodelDemo.vue'
 import VmodelDemo2 from './components/VmodelDemo2.vue'
 import OnMounted from './components/OnMounted.vue'
 import OnUnmounted from './components/OnUnmounted.vue'
+import onUpdated from './components/onUpdated.vue'
+
 const msgT = "I'm Jerry"
 </script>
 
@@ -63,7 +65,8 @@ const msgT = "I'm Jerry"
     <!-- <VmodelDemo /> -->
     <!-- <VmodelDemo2 /> -->
     <!-- <OnMounted /> -->
-    <OnUnmounted />
+    <!-- <OnUnmounted /> -->
+    <onUpdated />
   </main>
 </template>
 
