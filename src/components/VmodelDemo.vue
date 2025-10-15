@@ -12,6 +12,8 @@ const interestList = ref([
 ])
 
 const gender = ref('')
+
+const country = ref('')
 </script>
 
 <template>
@@ -46,6 +48,27 @@ const gender = ref('')
   <label><input type="radio" value="女" v-model="gender" /> 女</label>
 
   <p>你選擇的性別：{{ gender }}</p>
+
+  <hr />
+  <h3>選擇國家：</h3>
+  <select class="selectClass" v-model="country">
+    <option disabled value="">請選擇</option>
+    <option value="tw">台灣</option>
+    <option value="jp">日本</option>
+    <option value="us">美國</option>
+  </select>
+
+  <p>你選擇的國家代碼：{{ country }}</p>
 </template>
 
-<style scoped></style>
+<style scoped>
+.selectClass {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #333;
+  width: 200px;
+}
+</style>
