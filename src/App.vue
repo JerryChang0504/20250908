@@ -27,6 +27,7 @@ import VmodelDemo2 from './components/VmodelDemo2.vue'
 import OnMounted from './components/OnMounted.vue'
 import OnUnmounted from './components/OnUnmounted.vue'
 import onUpdated from './components/onUpdated.vue'
+import RefComponent from './components/RefComponent.vue'
 
 const msgT = "I'm Jerry"
 </script>
@@ -66,7 +67,8 @@ const msgT = "I'm Jerry"
     <!-- <VmodelDemo2 /> -->
     <!-- <OnMounted /> -->
     <!-- <OnUnmounted /> -->
-    <onUpdated />
+    <!-- <onUpdated /> -->
+    <RefComponent />
   </main>
 </template>
 
