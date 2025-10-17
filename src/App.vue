@@ -28,6 +28,7 @@ import OnMounted from './components/OnMounted.vue'
 import OnUnmounted from './components/OnUnmounted.vue'
 import onUpdated from './components/onUpdated.vue'
 import RefComponent from './components/RefComponent.vue'
+import ParentComponent from './components/ParentComponent.vue'
 
 const msgT = "I'm Jerry"
 </script>
@@ -68,7 +69,8 @@ const msgT = "I'm Jerry"
     <!-- <OnMounted /> -->
     <!-- <OnUnmounted /> -->
     <!-- <onUpdated /> -->
-    <RefComponent />
+    <!-- <RefComponent /> -->
+    <ParentComponent />
   </main>
 </template>
 

@@ -16,6 +16,7 @@ const setInputRef = (idx, el) => {
 
 const submit = () => {
   inputData.value.forEach((ipt, index) => {
+    console.log('🚀 ~ submit ~ ipt:', ipt)
     console.log(`${items.value[index].name} 數量 ${ipt.value}`)
   })
 }
