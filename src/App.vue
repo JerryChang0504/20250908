@@ -31,7 +31,7 @@ import RefComponent from './components/RefComponent.vue'
 import ParentComponent from './components/ParentComponent.vue'
 import WatchRef from './components/WatchRef.vue'
 import WatchDeepAndMutiValues from './components/WatchDeepAndMutiValues.vue'
-
+import WatchEffectComp from './components/WatchEffectComp.vue'
 const msgT = "I'm Jerry"
 </script>
 
@@ -74,7 +74,8 @@ const msgT = "I'm Jerry"
     <!-- <RefComponent /> -->
     <!-- <ParentComponent /> -->
     <!-- <WatchRef /> -->
-    <WatchDeepAndMutiValues />
+    <!-- <WatchDeepAndMutiValues /> -->
+    <WatchEffectComp />
   </main>
 </template>
 
