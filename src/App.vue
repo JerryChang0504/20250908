@@ -30,6 +30,7 @@ import onUpdated from './components/onUpdated.vue'
 import RefComponent from './components/RefComponent.vue'
 import ParentComponent from './components/ParentComponent.vue'
 import WatchRef from './components/WatchRef.vue'
+import WatchDeepAndMutiValues from './components/WatchDeepAndMutiValues.vue'
 
 const msgT = "I'm Jerry"
 </script>
@@ -72,7 +73,8 @@ const msgT = "I'm Jerry"
     <!-- <onUpdated /> -->
     <!-- <RefComponent /> -->
     <!-- <ParentComponent /> -->
-    <WatchRef />
+    <!-- <WatchRef /> -->
+    <WatchDeepAndMutiValues />
   </main>
 </template>
 
