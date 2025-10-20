@@ -33,6 +33,8 @@ import WatchRef from './components/WatchRef.vue'
 import WatchDeepAndMutiValues from './components/WatchDeepAndMutiValues.vue'
 import WatchEffectComp from './components/WatchEffectComp.vue'
 import TabComponent from './components/is/TabComponent.vue'
+import RegisterRunDown from './components/is/RegisterRunDown.vue'
+
 const msgT = "I'm Jerry"
 </script>
 
@@ -77,7 +79,8 @@ const msgT = "I'm Jerry"
     <!-- <WatchRef /> -->
     <!-- <WatchDeepAndMutiValues /> -->
     <!-- <WatchEffectComp /> -->
-    <TabComponent />
+    <!-- <TabComponent /> -->
+    <RegisterRunDown />
   </main>
 </template>
 
