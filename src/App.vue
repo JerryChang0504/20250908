@@ -40,6 +40,7 @@ import FancyButton from './components/slot/FancyButton.vue'
 import BaseLayout from './components/slot/BaseLayout.vue'
 import TabBar from './components/slot/TabBar.vue'
 import TabBarP from './components/slot/TabBarP.vue'
+import UserData from './components/slot/UserData.vue'
 
 const msgT = "I'm Jerry"
 
@@ -132,7 +133,8 @@ function onDelete() {
       <template #footer><p>Here's some contact info</p></template>
     </BaseLayout> -->
     <!-- <TabBar /> -->
-    <TabBarP />
+    <!-- <TabBarP /> -->
+    <UserData />
   </main>
 </template>
 
