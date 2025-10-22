@@ -116,6 +116,8 @@ function onDelete() {
     /> -->
     <!-- <PropsComp :propA="'A'" :propG="'success'" :propH="() => {}" :disabled="true" /> -->
     <!-- <ProductPage /> -->
+    <FancyButton><template v-slot:default> click me</template></FancyButton>
+    <FancyButton><template #default> click me</template></FancyButton>
     <FancyButton>click me</FancyButton>
   </main>
 </template>
