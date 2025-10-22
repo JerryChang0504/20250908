@@ -36,7 +36,7 @@ import TabComponent from './components/is/TabComponent.vue'
 import RegisterRunDown from './components/is/RegisterRunDown.vue'
 import PropsComp from './components/PropsComp.vue'
 import ProductPage from './components/ProductPage.vue'
-
+import FancyButton from './components/slot/FancyButton.vue'
 const msgT = "I'm Jerry"
 
 import { ref } from 'vue'
@@ -115,7 +115,8 @@ function onDelete() {
       :autoClose="false"
     /> -->
     <!-- <PropsComp :propA="'A'" :propG="'success'" :propH="() => {}" :disabled="true" /> -->
-    <ProductPage />
+    <!-- <ProductPage /> -->
+    <FancyButton>click me</FancyButton>
   </main>
 </template>
 
