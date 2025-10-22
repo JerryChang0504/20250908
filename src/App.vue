@@ -136,7 +136,10 @@ function onDelete() {
     <!-- <TabBar /> -->
     <!-- <TabBarP /> -->
     <!-- <UserData /> -->
-    <ProvideInjectRef />
+    <!-- <ProvideInjectRef /> -->
+    {{ $formatPrice(1000, 3) }}<br />
+    {{ new Date() }}<br />
+    {{ $formatDate(new Date()) }}
   </main>
 </template>
 
