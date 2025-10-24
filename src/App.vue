@@ -46,9 +46,8 @@ import ProvideInjectRef from './components/components/ProvideInjectRef.vue'
 const msgT = "I'm Jerry"
 
 import { ref } from 'vue'
-import { getCurrentInstance } from 'vue'
-const { appContext } = getCurrentInstance()
-console.log('🚀 ~ appContext:', appContext)
+import useFormat from './components/composables/useFormat'
+
 const show = ref(false)
 
 function open() {
@@ -68,10 +67,9 @@ function onDelete() {
   console.log('刪除成功')
 }
 
-const { $formatPrice, $formatDate } = appContext.config.globalProperties
-const price = $formatPrice(1000, 3)
+const price = useFormat().$fmPrice(1000, 3)
 console.log('🚀 ~ price:', price)
-const date = $formatDate(new Date())
+const date = useFormat().$formatDate(new Date())
 console.log('🚀 ~ date:', date)
 </script>
 
