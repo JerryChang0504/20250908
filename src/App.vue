@@ -46,7 +46,9 @@ import ProvideInjectRef from './components/components/ProvideInjectRef.vue'
 const msgT = "I'm Jerry"
 
 import { ref } from 'vue'
-
+import { getCurrentInstance } from 'vue'
+const { appContext } = getCurrentInstance()
+console.log('🚀 ~ appContext:', appContext)
 const show = ref(false)
 
 function open() {
@@ -61,9 +63,16 @@ const btns = [
 function onCancel() {
   console.log('使用者取消了')
 }
+
 function onDelete() {
   console.log('刪除成功')
 }
+
+const { $formatPrice, $formatDate } = appContext.config.globalProperties
+const price = $formatPrice(1000, 3)
+console.log('🚀 ~ price:', price)
+const date = $formatDate(new Date())
+console.log('🚀 ~ date:', date)
 </script>
 
 <template>
