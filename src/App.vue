@@ -144,9 +144,15 @@ console.log('🚀 ~ date:', date)
     <!-- <TabBarP /> -->
     <!-- <UserData /> -->
     <!-- <ProvideInjectRef /> -->
-    {{ $formatPrice(1000, 3) }}<br />
-    {{ new Date() }}<br />
-    {{ $formatDate(new Date()) }}
+    <!-- {{ $formatPrice(1000, 3) }}<br /> -->
+    <!-- {{ new Date() }}<br /> -->
+    <!-- {{ $formatDate(new Date()) }} -->
+    <h1>我的網站</h1>
+    <nav>
+      <router-link to="/">首頁</router-link> |
+      <router-link to="/about">關於</router-link>
+    </nav>
+    <router-view />
   </main>
 </template>
 
