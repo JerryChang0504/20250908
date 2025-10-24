@@ -149,8 +149,8 @@ console.log('🚀 ~ date:', date)
     <!-- {{ $formatDate(new Date()) }} -->
     <h1>我的網站</h1>
     <nav>
-      <router-link to="/">首頁</router-link> |
-      <router-link to="/about">關於</router-link>
+      <router-link to="/">首頁</router-link> | <router-link to="/about">關於</router-link> |
+      <router-link to="/users/Jerry/posts/1234">使用者資訊</router-link>
     </nav>
     <router-view />
   </main>
