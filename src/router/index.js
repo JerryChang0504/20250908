@@ -6,6 +6,7 @@ import UserPost from '@/views/UserPost.vue'
 import Users from '@/views/Users.vue'
 import UsersList from '@/views/UsersList.vue'
 import UserspPofile from '@/views/UserspPofile.vue'
+import UsersData from '@/views/UsersData.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -15,6 +16,7 @@ const routes = [
     path: '/users',
     component: Users,
     children: [
+      { path: ':id', name: 'UsersData', component: UsersData, props: true }, // ✅ 啟用 props
       { path: 'list', component: UsersList },
       { path: 'profile', component: UserspPofile },
     ],
