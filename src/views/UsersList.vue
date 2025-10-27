@@ -5,10 +5,10 @@ const users = ref(['Alice', 'Bob', 'Charlie'])
 const router = useRouter()
 
 // 點擊後導向
-function goToUser(name) {
+const goToUser = (user) => {
   router.push({
     name: 'UserDetail', // 對應 router 設定的 route name
-    params: { name }, // 傳遞參數
+    params: { username: user }, // 傳遞參數
   })
 }
 </script>
@@ -28,6 +28,17 @@ function goToUser(name) {
       <!-- <li>Alice</li>
       <li>Bob</li>
       <li>Charlie</li> -->
+
+      <hr />
+      <button
+        @click="
+          () => {
+            router.push({ name: 'profile', query: { q: 'book', page: '1' } })
+          }
+        "
+      >
+        router.query
+      </button>
     </ul>
   </div>
 </template>
