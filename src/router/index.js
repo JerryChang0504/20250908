@@ -14,10 +14,15 @@ const routes = [
     path: '/users',
     component: Users,
     children: [
-      { path: ':id', name: 'UsersData', component: UsersData, props: true }, // ✅ 啟用 props
+      { path: ':id', name: 'UsersX', component: UsersData, props: true }, // ✅ 啟用 props
       { path: 'list', component: UsersList },
       { path: 'profile', component: UserspPofile },
     ],
+  },
+  {
+    path: '/user/:name',
+    name: 'UserDetail',
+    component: () => import('@/views/UserDetail.vue'),
   },
 ]
 
