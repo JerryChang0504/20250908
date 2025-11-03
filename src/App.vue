@@ -152,8 +152,6 @@ console.log('🚀 ~ date:', date)
     <h1>我的網站</h1>
     <TopBar />
     <router-view />
-
-    <AxiosComp />
   </main>
 </template>
 
