@@ -43,6 +43,7 @@ import TabBarP from './components/slot/TabBarP.vue'
 import UserData from './components/slot/UserData.vue'
 import ProvideInjectRef from './components/components/ProvideInjectRef.vue'
 import TopBar from './components/TopBar.vue'
+import AxiosComp from './components/AxiosComp.vue'
 
 const msgT = "I'm Jerry"
 
@@ -151,6 +152,8 @@ console.log('🚀 ~ date:', date)
     <h1>我的網站</h1>
     <TopBar />
     <router-view />
+
+    <AxiosComp />
   </main>
 </template>
 
