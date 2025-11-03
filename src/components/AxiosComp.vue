@@ -16,7 +16,7 @@ const queryProduct = () => {
 
 <template>
   <div>
-    <button @click="queryProduct()">查詢產品</button>
+    <el-button type="primary" @click="queryProduct()">查詢產品</el-button>
   </div>
 </template>
 
