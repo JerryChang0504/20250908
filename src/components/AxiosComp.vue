@@ -1,8 +1,8 @@
 <script setup>
 import axios from 'axios'
-import { reactive } from 'vue'
+import { ref } from 'vue'
 
-const columns = reactive([
+const columns = ref([
   {
     propval: 'id',
     label: 'ID',
@@ -26,18 +26,19 @@ const columns = reactive([
   },
 ])
 
-const tableData = reactive([])
+const tableData = ref([])
 
 let apiService = axios.create({
   baseURL: 'http://localhost:8080',
 })
 
-const queryProduct = () => {
+const queryProduct = async () => {
   // GET
-  apiService
+  await apiService
     .get('/api/queryAllProducts')
     .then((response) => {
-      Object.assign(tableData, response.data)
+      tableData.value = response.data
+      // Object.assign(tableData.value, response.data)
     })
     .catch((error) => console.error(error))
 }
@@ -45,15 +46,17 @@ const queryProduct = () => {
 const handleEdit = (index, row) => {
   console.log(index, row)
 }
-const handleDelete = (index, row) => {
+const handleDelete = async (index, row) => {
   console.log(index, row)
-  apiService
+  await apiService
     .delete('/api/deleteProduct/' + row.id)
     .then((response) => {
       console.log(response)
+      if (response.status === 200) {
+        queryProduct()
+      }
     })
     .catch((error) => console.error(error))
-  queryProduct()
 }
 </script>
 
