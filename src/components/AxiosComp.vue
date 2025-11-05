@@ -28,6 +28,14 @@ const columns = ref([
 
 const tableData = ref([])
 
+const editForm = ref({
+  id: '',
+  name: '',
+  price: '',
+  description: '',
+  image: '',
+})
+
 let apiService = axios.create({
   baseURL: 'http://localhost:8080',
 })
@@ -44,12 +52,24 @@ const queryProduct = async () => {
 }
 
 const handleEdit = (index, row) => {
-  console.log(index, row)
+  editForm.value = row
 }
 const handleDelete = async (index, row) => {
   console.log(index, row)
   await apiService
     .delete('/api/deleteProduct/' + row.id)
+    .then((response) => {
+      console.log(response)
+      if (response.status === 200) {
+        queryProduct()
+      }
+    })
+    .catch((error) => console.error(error))
+}
+
+const submitForm = async () => {
+  await apiService
+    .put('/api/updateProduct', editForm.value)
     .then((response) => {
       console.log(response)
       if (response.status === 200) {
@@ -81,6 +101,34 @@ const handleDelete = async (index, row) => {
     </el-table>
 
     <el-button type="primary" @click="queryProduct()">查詢產品</el-button>
+
+    <el-form
+      ref="formRef"
+      :model="editForm"
+      label-width="100px"
+      style="max-width: 400px; margin: auto"
+    >
+      <el-form-item label="產品名稱" prop="name">
+        <el-input v-model="editForm.name" />
+      </el-form-item>
+
+      <el-form-item label="描述" prop="description">
+        <el-input v-model="editForm.description" type="textarea" />
+      </el-form-item>
+
+      <el-form-item label="價格" prop="product_price">
+        <el-input-number v-model="editForm.price" :min="0" />
+      </el-form-item>
+
+      <el-form-item label="圖片 URL" prop="image">
+        <el-input v-model="editForm.image" />
+      </el-form-item>
+
+      <el-form-item>
+        <el-button type="primary" @click="submitForm">提交</el-button>
+        <el-button @click="resetForm">重置</el-button>
+      </el-form-item>
+    </el-form>
   </div>
 </template>
 
