@@ -1,6 +1,6 @@
 <script setup>
-import { reactive } from 'vue'
 import axios from 'axios'
+import { reactive } from 'vue'
 
 const columns = reactive([
   {
@@ -18,7 +18,7 @@ const columns = reactive([
   {
     propval: 'description',
     label: 'Description',
-    width: 180,
+    width: 200,
   },
   {
     propval: 'image',
@@ -41,6 +41,20 @@ const queryProduct = () => {
     })
     .catch((error) => console.error(error))
 }
+
+const handleEdit = (index, row) => {
+  console.log(index, row)
+}
+const handleDelete = (index, row) => {
+  console.log(index, row)
+  apiService
+    .delete('/api/deleteProduct/' + row.id)
+    .then((response) => {
+      console.log(response)
+    })
+    .catch((error) => console.error(error))
+  queryProduct()
+}
 </script>
 
 <template>
@@ -51,8 +65,16 @@ const queryProduct = () => {
         :prop="column.propval"
         :label="column.label"
         :key="index"
-        :width="column?.width"
+        :width="column.width"
       />
+      <el-table-column label="Operations">
+        <template #default="scope">
+          <el-button size="small" @click="handleEdit(scope.$index, scope.row)"> Edit </el-button>
+          <el-button size="small" type="danger" @click="handleDelete(scope.$index, scope.row)">
+            Delete
+          </el-button>
+        </template>
+      </el-table-column>
     </el-table>
 
     <el-button type="primary" @click="queryProduct()">查詢產品</el-button>
